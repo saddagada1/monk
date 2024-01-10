@@ -11,7 +11,7 @@ import SwiftUI
 struct monkApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            rootView()
         }
     }
 }
