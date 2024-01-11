@@ -8,14 +8,33 @@
 import SwiftUI
 
 struct metronomeView: View {
+    @State private var bpm: CGFloat = 100
     var body: some View {
-        VStack (alignment: .leading) {
-            Text("Metronome").font(.title1).foregroundStyle(Color("foreground")).multilineTextAlignment(.leading)
+        VStack {
+            dial(value: $bpm).padding(.vertical, 24)
+            HStack {
+                Text("\(self.bpm, specifier: "%.0f")")
+                    .font(.subTitle1)
+                    .foregroundColor(Color("foreground"))
+                Spacer()
+                Button {} label: { Text("Play").font(.header)
+                    .padding(.horizontal)
+                    .padding(.vertical, 8)
+                    .foregroundColor(Color("foreground"))
+                    .background(Capsule().foregroundColor(Color("brand")))
+                }
+
+            }.padding(.horizontal)
+            Divider().padding(.horizontal).background(Color("brand"))
             Spacer()
         }
     }
 }
 
 #Preview {
-    metronomeView()
+    ZStack {
+        Color("background")
+            .ignoresSafeArea()
+        metronomeView()
+    }
 }

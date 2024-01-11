@@ -27,6 +27,7 @@
 		328824172B4E6FE300E00D68 /* chordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328824162B4E6FE300E00D68 /* chordsView.swift */; };
 		328824192B4E6FF600E00D68 /* scalesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328824182B4E6FF600E00D68 /* scalesView.swift */; };
 		3288241B2B4E700C00E00D68 /* songsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3288241A2B4E700C00E00D68 /* songsView.swift */; };
+		32A0C7822B4F261F002F2CC1 /* dial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A0C7812B4F261F002F2CC1 /* dial.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		328824162B4E6FE300E00D68 /* chordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chordsView.swift; sourceTree = "<group>"; };
 		328824182B4E6FF600E00D68 /* scalesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scalesView.swift; sourceTree = "<group>"; };
 		3288241A2B4E700C00E00D68 /* songsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = songsView.swift; sourceTree = "<group>"; };
+		32A0C7812B4F261F002F2CC1 /* dial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dial.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				328823FF2B4E4B2100E00D68 /* tabBar */,
+				32A0C7812B4F261F002F2CC1 /* dial.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				328824032B4E4B5700E00D68 /* fonts.swift in Sources */,
 				328824192B4E6FF600E00D68 /* scalesView.swift in Sources */,
 				328824012B4E4B3E00E00D68 /* tabBar.swift in Sources */,
+				32A0C7822B4F261F002F2CC1 /* dial.swift in Sources */,
 				3288241B2B4E700C00E00D68 /* songsView.swift in Sources */,
 				3288240E2B4E615700E00D68 /* tabBarLink.swift in Sources */,
 				328823D42B4E4AD900E00D68 /* rootView.swift in Sources */,
