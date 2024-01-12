@@ -27,7 +27,13 @@
 		328824172B4E6FE300E00D68 /* chordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328824162B4E6FE300E00D68 /* chordsView.swift */; };
 		328824192B4E6FF600E00D68 /* scalesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328824182B4E6FF600E00D68 /* scalesView.swift */; };
 		3288241B2B4E700C00E00D68 /* songsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3288241A2B4E700C00E00D68 /* songsView.swift */; };
+		328C2E622B509C910029AABB /* cowbell.wav in Resources */ = {isa = PBXBuildFile; fileRef = 328C2E612B509C910029AABB /* cowbell.wav */; };
+		328C2E652B50A1F60029AABB /* metronomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328C2E642B50A1F60029AABB /* metronomeViewModel.swift */; };
+		328C2E682B50C4B20029AABB /* default-hi.flac in Resources */ = {isa = PBXBuildFile; fileRef = 328C2E662B50C4B10029AABB /* default-hi.flac */; };
+		328C2E692B50C4B20029AABB /* default-low.flac in Resources */ = {isa = PBXBuildFile; fileRef = 328C2E672B50C4B10029AABB /* default-low.flac */; };
 		32A0C7822B4F261F002F2CC1 /* dial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A0C7812B4F261F002F2CC1 /* dial.swift */; };
+		32A0C7842B4F9021002F2CC1 /* metronomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A0C7832B4F9021002F2CC1 /* metronomeModel.swift */; };
+		32A0C7872B4F91C6002F2CC1 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 32A0C7862B4F91C6002F2CC1 /* AudioKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +78,12 @@
 		328824162B4E6FE300E00D68 /* chordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chordsView.swift; sourceTree = "<group>"; };
 		328824182B4E6FF600E00D68 /* scalesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scalesView.swift; sourceTree = "<group>"; };
 		3288241A2B4E700C00E00D68 /* songsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = songsView.swift; sourceTree = "<group>"; };
+		328C2E612B509C910029AABB /* cowbell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cowbell.wav; sourceTree = "<group>"; };
+		328C2E642B50A1F60029AABB /* metronomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = metronomeViewModel.swift; sourceTree = "<group>"; };
+		328C2E662B50C4B10029AABB /* default-hi.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "default-hi.flac"; sourceTree = "<group>"; };
+		328C2E672B50C4B10029AABB /* default-low.flac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "default-low.flac"; sourceTree = "<group>"; };
 		32A0C7812B4F261F002F2CC1 /* dial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dial.swift; sourceTree = "<group>"; };
+		32A0C7832B4F9021002F2CC1 /* metronomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = metronomeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32A0C7872B4F91C6002F2CC1 /* AudioKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,9 +135,10 @@
 		328823D02B4E4AD900E00D68 /* monk */ = {
 			isa = PBXGroup;
 			children = (
+				328C2E602B509C610029AABB /* sounds */,
 				3288240F2B4E6F6000E00D68 /* components */,
 				3288240C2B4E4F3100E00D68 /* Info.plist */,
-				328823FE2B4E4B0100E00D68 /* viewModels */,
+				328823FE2B4E4B0100E00D68 /* models */,
 				328823FD2B4E4AFC00E00D68 /* lib */,
 				328823FC2B4E4AF700E00D68 /* fonts */,
 				328823FB2B4E4AEF00E00D68 /* views */,
@@ -164,10 +177,10 @@
 		328823FB2B4E4AEF00E00D68 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				328C2E632B50A1DD0029AABB /* metronome */,
 				328823D32B4E4AD900E00D68 /* rootView.swift */,
 				328824102B4E6F8400E00D68 /* looperView.swift */,
 				328824122B4E6FA300E00D68 /* tunerView.swift */,
-				328824142B4E6FC500E00D68 /* metronomeView.swift */,
 				328824162B4E6FE300E00D68 /* chordsView.swift */,
 				328824182B4E6FF600E00D68 /* scalesView.swift */,
 				3288241A2B4E700C00E00D68 /* songsView.swift */,
@@ -194,11 +207,12 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
-		328823FE2B4E4B0100E00D68 /* viewModels */ = {
+		328823FE2B4E4B0100E00D68 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				32A0C7832B4F9021002F2CC1 /* metronomeModel.swift */,
 			);
-			path = viewModels;
+			path = models;
 			sourceTree = "<group>";
 		};
 		328823FF2B4E4B2100E00D68 /* tabBar */ = {
@@ -219,6 +233,25 @@
 			path = components;
 			sourceTree = "<group>";
 		};
+		328C2E602B509C610029AABB /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				328C2E662B50C4B10029AABB /* default-hi.flac */,
+				328C2E672B50C4B10029AABB /* default-low.flac */,
+				328C2E612B509C910029AABB /* cowbell.wav */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+		328C2E632B50A1DD0029AABB /* metronome */ = {
+			isa = PBXGroup;
+			children = (
+				328824142B4E6FC500E00D68 /* metronomeView.swift */,
+				328C2E642B50A1F60029AABB /* metronomeViewModel.swift */,
+			);
+			path = metronome;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -235,6 +268,9 @@
 			dependencies = (
 			);
 			name = monk;
+			packageProductDependencies = (
+				32A0C7862B4F91C6002F2CC1 /* AudioKit */,
+			);
 			productName = monk;
 			productReference = 328823CE2B4E4AD900E00D68 /* monk.app */;
 			productType = "com.apple.product-type.application";
@@ -307,6 +343,9 @@
 				Base,
 			);
 			mainGroup = 328823C52B4E4AD900E00D68;
+			packageReferences = (
+				32A0C7852B4F91C6002F2CC1 /* XCRemoteSwiftPackageReference "AudioKit" */,
+			);
 			productRefGroup = 328823CF2B4E4AD900E00D68 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -323,11 +362,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				328C2E622B509C910029AABB /* cowbell.wav in Resources */,
 				328823D92B4E4ADB00E00D68 /* Preview Assets.xcassets in Resources */,
+				328C2E692B50C4B20029AABB /* default-low.flac in Resources */,
 				328824092B4E4BF200E00D68 /* PPNeueMontreal-Book.otf in Resources */,
 				328824082B4E4BF200E00D68 /* PPNeueMontreal-Thin.otf in Resources */,
 				3288240B2B4E4BF200E00D68 /* PPNeueMontreal-Medium.otf in Resources */,
 				3288240A2B4E4BF200E00D68 /* PPNeueMontreal-Bold.otf in Resources */,
+				328C2E682B50C4B20029AABB /* default-hi.flac in Resources */,
 				328823D62B4E4ADB00E00D68 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,9 +404,11 @@
 				328823D42B4E4AD900E00D68 /* rootView.swift in Sources */,
 				328823D22B4E4AD900E00D68 /* monkApp.swift in Sources */,
 				328824172B4E6FE300E00D68 /* chordsView.swift in Sources */,
+				328C2E652B50A1F60029AABB /* metronomeViewModel.swift in Sources */,
 				328824112B4E6F8400E00D68 /* looperView.swift in Sources */,
 				328824132B4E6FA300E00D68 /* tunerView.swift in Sources */,
 				328824152B4E6FC500E00D68 /* metronomeView.swift in Sources */,
+				32A0C7842B4F9021002F2CC1 /* metronomeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,6 +734,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		32A0C7852B4F91C6002F2CC1 /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		32A0C7862B4F91C6002F2CC1 /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32A0C7852B4F91C6002F2CC1 /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 328823C62B4E4AD900E00D68 /* Project object */;
 }

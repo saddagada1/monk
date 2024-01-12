@@ -20,6 +20,7 @@ struct tabBarLink: View {
         }} label: {
             Text(name)
                 .font(.header)
+                .textCase(.lowercase)
                 .padding(.horizontal)
                 .padding(.vertical, 8)
                 .foregroundColor(Color("foreground"))

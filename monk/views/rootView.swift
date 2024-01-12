@@ -36,7 +36,7 @@ struct rootView: View {
         case .tuner:
             tunerView()
         case .metronome:
-            metronomeView()
+            MetronomeView(viewModel: MetronomeViewModel(metronome: Metronome.defaultInstance))
         case .chords:
             chordsView()
         case .scales:
